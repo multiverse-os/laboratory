@@ -1,16 +1,8 @@
-package utils
+package hardware
 
 import (
-	//"math"
-	//"unicode"
 	"regexp"
-	// "net/url"
-	// "sort"
-	//"strconv"
 	"strings"
-
-	"github.com/saycv/ebomgen/pkg/types"
-	//log "github.com/sirupsen/logrus"
 )
 
 func mustRegexpMatch(pattern string, b []byte) bool {
@@ -201,8 +193,8 @@ func NamerulesProcess(part types.EBOMItem, propvalue string, propfootprint strin
 		propclass["part"] = "TestPoint"
 		propclass["group"] = "MOUNT"
 	} else if strings.HasPrefix(_capREF, "D") &&
-		(strings.Contains(_capVAL, "LED") || strings.Contains(_capVAL, "GRN") || strings.Contains(_capVAL, "RED") || strings.Contains(_capVAL, "YLW") || 
-		strings.Contains(_capVAL, "GREEN") || strings.Contains(_capVAL, "YELLOW") || strings.Contains(propfootprint, "LED")) {
+		(strings.Contains(_capVAL, "LED") || strings.Contains(_capVAL, "GRN") || strings.Contains(_capVAL, "RED") || strings.Contains(_capVAL, "YLW") ||
+			strings.Contains(_capVAL, "GREEN") || strings.Contains(_capVAL, "YELLOW") || strings.Contains(propfootprint, "LED")) {
 		propclass["part"] = "LED"
 		propclass["group"] = "Passive"
 	}

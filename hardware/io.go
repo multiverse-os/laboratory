@@ -1,16 +1,12 @@
-package utils
+package hardware
 
 import (
 	"reflect"
 	"strings"
 
 	"github.com/pkg/errors"
-	log "github.com/sirupsen/logrus"
+	"github.com/prometheus/common/log"
 )
-
-// "net/url"
-// "sort"
-//"github.com/saycv/ebomgen/pkg/types"
 
 var (
 	DEFAULT_TRANS_COUNT = map[string]interface{}{

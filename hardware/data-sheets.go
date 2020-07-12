@@ -1,21 +1,14 @@
-package utils
+package hardware
 
 import (
-	//"io"
-	//"fmt"
 	"math/rand"
 	"os"
 	"regexp"
+	"strconv"
+	"strings"
 	"sync"
 	"time"
 	"unicode"
-
-	// "net/url"
-	// "sort"
-	"strconv"
-	"strings"
-
-	//"github.com/saycv/ebomgen/pkg/types"
 
 	"github.com/fedesog/webdriver"
 	log "github.com/sirupsen/logrus"
